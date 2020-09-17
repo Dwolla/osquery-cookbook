@@ -35,7 +35,7 @@ action :install_centos do
   package_action = new_resource.upgrade ? :upgrade : :install
 
   yum_repository 'osquery' do
-    baseurl 'https://s3.amazonaws.com/osquery-packages/rpm/$basearch/'
+    baseurl 'https://osquery-packages.s3.amazonaws.com/rpm/$basearch/'
     gpgkey 'https://pkg.osquery.io/rpm/GPG'
     action :create
   end
@@ -51,7 +51,7 @@ action :install_amazon do
   package_action = new_resource.upgrade ? :upgrade : :install
 
   yum_repository 'osquery' do
-    baseurl 'https://s3.amazonaws.com/osquery-packages/rpm/$basearch/'
+    baseurl 'https://osquery-packages.s3.amazonaws.com/rpm/$basearch/'
     gpgkey 'https://pkg.osquery.io/rpm/GPG'
     action :create
   end

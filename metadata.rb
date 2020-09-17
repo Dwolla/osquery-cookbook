@@ -6,7 +6,7 @@ maintainer_email 'dev+chef-osquery@dwolla.com'
 license 'Apache-2.0'
 description 'Install and configure osquery (osquery.io)'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version '1.9.0'
+version '1.9.1'
 
 %w[ubuntu centos redhat mac_os_x amazon].each do |os|
   supports os
