@@ -13,7 +13,7 @@ describe 'osquery::amazon' do
     {
       'osquery' => {
         'packs' => %w[chefspec],
-        'version' => '4.0.2'
+        'version' => '4.5.1'
       }
     }.merge(node_attributes_extra)
   end
@@ -32,11 +32,11 @@ describe 'osquery::amazon' do
 
   context 'specific version' do
     it 'installs osquery' do
-      expect(chef_run).to install_osquery_amazon('4.0.2')
+      expect(chef_run).to install_osquery_amazon('4.5.1')
     end
 
     it 'installs osquery package' do
-      expect(chef_run).to install_package('osquery').with(version: '4.0.2-1.linux')
+      expect(chef_run).to install_package('osquery').with(version: '4.5.1-1.linux')
     end
   end
 
@@ -52,11 +52,11 @@ describe 'osquery::amazon' do
     end
 
     it 'installs osquery' do
-      expect(chef_run).to install_osquery_amazon('4.0.2')
+      expect(chef_run).to install_osquery_amazon('4.5.1')
     end
 
     it 'installs/upgrades osquery package' do
-      expect(chef_run).to upgrade_package('osquery').with(version: '4.0.2-1.linux')
+      expect(chef_run).to upgrade_package('osquery').with(version: '4.5.1-1.linux')
     end
   end
 
