@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # osquery version and packs.
-default['osquery']['version'] = '4.0.2'
+default['osquery']['version'] = '4.5.1'
 default['osquery']['pack_source'] = 'osquery'
 default['osquery']['packs'] = %w[osquery-monitoring]
 
